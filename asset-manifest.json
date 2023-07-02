@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/SEG-React/static/css/main.4dbd524c.css",
+    "main.js": "/SEG-React/static/js/main.70a6f829.js",
+    "static/js/787.aac9f782.chunk.js": "/SEG-React/static/js/787.aac9f782.chunk.js",
+    "static/media/House (4).png": "/SEG-React/static/media/House (4).baaf7fcbda62f1791331.png",
+    "static/media/Background.png": "/SEG-React/static/media/Background.72bfff3d30cbcb8aaf7e.png",
+    "static/media/House (1).png": "/SEG-React/static/media/House (1).e1d1f415374c045989a0.png",
+    "static/media/House (3).png": "/SEG-React/static/media/House (3).0263b90c5fa5cc114f9a.png",
+    "static/media/House (2).png": "/SEG-React/static/media/House (2).8bfa0e6edd81bad1f4f6.png",
+    "static/media/GreenCheckMark.png": "/SEG-React/static/media/GreenCheckMark.07c1b430de71a343ecdc.png",
+    "index.html": "/SEG-React/index.html",
+    "main.4dbd524c.css.map": "/SEG-React/static/css/main.4dbd524c.css.map",
+    "main.70a6f829.js.map": "/SEG-React/static/js/main.70a6f829.js.map",
+    "787.aac9f782.chunk.js.map": "/SEG-React/static/js/787.aac9f782.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4dbd524c.css",
+    "static/js/main.70a6f829.js"
+  ]
+}
