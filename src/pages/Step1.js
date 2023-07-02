@@ -45,14 +45,13 @@ const Step1 = () => {
                 <h2>Create Account/Sign in</h2>
             </div>
             {/* /################################################### */}
-            <form className="row g-3 needs-validation" action="./Step2">
-                <button type="submit" className="btn btn-primary col-md-1 ">
-                    Log in
-                </button>
-            </form>
-
-            <hr className="solid"></hr>
-
+            <div className="col-12">
+                <form action="./Step2">
+                    <button className="btn btn-primary" type="submit">
+                        Log in
+                    </button>
+                </form>
+            </div>
             <div className="container text-center">
                 <section className="section">
                     <form
@@ -60,6 +59,7 @@ const Step1 = () => {
                         Validate
                         action="./Step2"
                     >
+                        <hr className="solid"></hr>
                         <div className="col-md-6">
                             <br />
                             <br />
