@@ -1,6 +1,12 @@
+import { useHistory } from "react-router-dom";
 import house1 from "../components/images/House (1).png";
 
 const Property = () => {
+    const history = useHistory();
+
+    const switch_to_Forsale = () => {
+        history.push("/ForSale");
+    };
     return (
         <div className="container">
             <br />
@@ -179,9 +185,12 @@ const Property = () => {
                 <div className="col">
                     <div className="row row-cols-1 row-cols-md-2 g-3">
                         <div className="col">
-                            <div className="card h-100">
+                            <div
+                                onClick={switch_to_Forsale}
+                                className="card h-100"
+                            >
                                 <img
-                                    src="..."
+                                    src={require("../components/images/House (1).png")}
                                     className="card-img-top"
                                     alt="..."
                                 />
@@ -197,9 +206,12 @@ const Property = () => {
                             </div>
                         </div>
                         <div className="col">
-                            <div className="card h-100">
+                            <div
+                                onClick={switch_to_Forsale}
+                                className="card h-100"
+                            >
                                 <img
-                                    src="..."
+                                    src={require("../components/images/House (2).png")}
                                     className="card-img-top"
                                     alt="..."
                                 />
@@ -212,9 +224,12 @@ const Property = () => {
                             </div>
                         </div>
                         <div className="col">
-                            <div className="card h-100">
+                            <div
+                                className="card h-100"
+                                onClick={switch_to_Forsale}
+                            >
                                 <img
-                                    src="..."
+                                    src={require("../components/images/House (3).png")}
                                     className="card-img-top"
                                     alt="..."
                                 />
@@ -229,9 +244,12 @@ const Property = () => {
                             </div>
                         </div>
                         <div className="col">
-                            <div className="card h-100">
+                            <div
+                                className="card h-100"
+                                onClick={switch_to_Forsale}
+                            >
                                 <img
-                                    src="..."
+                                    src={require("../components/images/House (4).png")}
                                     className="card-img-top"
                                     alt="..."
                                 />

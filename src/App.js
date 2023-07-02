@@ -7,6 +7,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Property from "./pages/Property";
+import ForSale from "./pages/ForSale";
+import Step1 from "./pages/Step1";
+import Step2 from "./pages/Step2";
+import Step3 from "./pages/Step3";
 
 const App = () => {
     return (
@@ -24,6 +28,18 @@ const App = () => {
                 </Route>
                 <Route path="/Property">
                     <Property />
+                </Route>
+                <Route path="/ForSale">
+                    <ForSale />
+                </Route>
+                <Route path="/Step1">
+                    <Step1 />
+                </Route>
+                <Route path="/Step2">
+                    <Step2 />
+                </Route>
+                <Route path="/Step3">
+                    <Step3 />
                 </Route>
             </Switch>
         </Router>
