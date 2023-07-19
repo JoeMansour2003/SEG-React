@@ -19,12 +19,12 @@ const About = () => {
                                 >
                                     <img
                                         className="card-img-top"
-                                        src="staff/Doofenshmirtz.png"
-                                        alt="Photo of Dr. Doofenshmirtz"
+                                        src={require("../components/images/Sergio.png")}
+                                        alt="Photo of Sergio Marquina property owner"
                                     />
                                     <div className="card-body">
                                         <h4 className="card-title">
-                                            Doofenshmirtz
+                                            Sergio Marquina
                                         </h4>
                                         <div className="card-text">
                                             <p>
@@ -32,15 +32,13 @@ const About = () => {
                                                 cosmetics dentistry
                                             </p>
                                             <p>
-                                                &#x2022; Practising since 1982
+                                                &#x2022; Owner of Montreal
+                                                biggest apple cider company.
                                             </p>
                                             <p>
-                                                &#x2022; Graduated from Harvard
-                                                University
-                                            </p>
-                                            <p>
-                                                &#x2022; Reviews all work done
-                                                in the office
+                                                &#x2022; Studied Architecture in
+                                                Italy and received his masters
+                                                at the university of Montreal.
                                             </p>
                                         </div>
                                     </div>
@@ -53,26 +51,24 @@ const About = () => {
                                 >
                                     <img
                                         className="card-img-top"
-                                        src="staff/Koasha.png"
-                                        alt="Photo of Dr. Koasha"
+                                        src={require("../components/images/Gus.png")}
+                                        alt="Photo of Gus Fring property owner"
                                     />
                                     <div className="card-body">
-                                        <h4 className="card-title">Koasha</h4>
+                                        <h4 className="card-title">
+                                            Gus Fring
+                                        </h4>
                                         <div className="card-text">
                                             <p>
-                                                &#x2022; Specialized in
-                                                orthodontics
+                                                &#x2022; Owner of Los Pollos
+                                                Hermanos.
                                             </p>
                                             <p>
-                                                &#x2022; Practising since 1995
-                                            </p>
-                                            <p>
-                                                &#x2022; Graduated from
-                                                University of Toronto
-                                            </p>
-                                            <p>
-                                                &#x2022; Member of the American
-                                                Association of Orthodontists
+                                                &#x2022; He specializes in
+                                                organizing apartment services
+                                                like Maintenance, Security,
+                                                Lease Renewal and Rent
+                                                Collection...
                                             </p>
                                         </div>
                                     </div>
