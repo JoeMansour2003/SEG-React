@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import background from "../components/images/Background.png";
 
 const Home = () => {
+    const [t, i18n] = useTranslation("global");
     return (
         <div
             className="container"
@@ -22,7 +24,7 @@ const Home = () => {
                 <br />
                 <br />
                 <br />
-                <h1>Living confortably has never been this easy!</h1>
+                <h1>{t("home.message")}</h1>
                 <br />
                 <br />
                 <br />

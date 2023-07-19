@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+    const [t, i18n] = useTranslation("global");
+
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+    };
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
@@ -45,6 +52,8 @@ const Navbar = () => {
                                 Property
                             </Link>
                         </li>
+                        <button onClick={() => changeLanguage("en")}>EN</button>
+                        <button onClick={() => changeLanguage("fr")}>FR</button>
                     </ul>
                 </div>
             </div>
