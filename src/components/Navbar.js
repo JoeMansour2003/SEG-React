@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import logo from "./images/logo.png";
 
 const Navbar = () => {
     const [t, i18n] = useTranslation("global");
@@ -13,7 +14,7 @@ const Navbar = () => {
             <div className="container">
                 <Link className="navbar-brand" to="/">
                     <img
-                        src="logo.png"
+                        src={logo}
                         width="30"
                         height="30"
                         className="d-inline-block align-top"
@@ -52,8 +53,18 @@ const Navbar = () => {
                                 Property
                             </Link>
                         </li>
-                        <button onClick={() => changeLanguage("en")}>EN</button>
-                        <button onClick={() => changeLanguage("fr")}>FR</button>
+                        <button
+                            className="btn btn-link nav-link language-button"
+                            onClick={() => changeLanguage("en")}
+                        >
+                            EN
+                        </button>
+                        <button
+                            className="btn btn-link nav-link language-button"
+                            onClick={() => changeLanguage("fr")}
+                        >
+                            FR
+                        </button>
                     </ul>
                 </div>
             </div>

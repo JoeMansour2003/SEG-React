@@ -7,7 +7,7 @@ const ForSale = () => {
         history.push("/Step1");
     };
     return (
-        <div className="container">
+        <div className="container text-center">
             <div
                 id="carouselExampleIndicators"
                 className="carousel slide"
@@ -38,21 +38,21 @@ const ForSale = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img
-                            src={require("../components/images/Background.png")}
+                            src={require("../components/images/interior2.jpg")}
                             className="d-block w-100"
                             alt="..."
                         />
                     </div>
                     <div className="carousel-item">
                         <img
-                            src={require("../components/images/House (1).png")}
+                            src={require("../components/images/kitchen1.png")}
                             className="d-block w-100"
                             alt="..."
                         />
                     </div>
                     <div className="carousel-item">
                         <img
-                            src={require("../components/images/House (3).png")}
+                            src={require("../components/images/washroom1.jpg")}
                             className="d-block w-100"
                             alt="..."
                         />
@@ -83,6 +83,48 @@ const ForSale = () => {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
+
+            {/* TEXT */}
+            <div className="row justify-content-around">
+                <div className="col-4">
+                    <div className="text-left">
+                        {/* TODO text is not aligned to the left */}
+                        <h4>444 spadian road</h4>
+                        <p>Forest Hill, Toronto</p>
+                        <br />
+                        <h4>Property Details</h4>
+                        <p>2 Bedroom 1 Washroom</p>
+                        <br />
+                        <h4>Lease and Fees</h4>
+                        <p>Rent :$ 3,77</p>
+                        <p>semi-annual payments or annual payments</p>
+                        <p>Secutity Deposit $5,000</p>
+                        <br />
+                        <h4>Included Amenities</h4>
+                        <p>Dishwasher</p>
+                        <p>Fridge</p>
+                        <p>Oven</p>
+                        <p>Stove</p>
+                        <p>Heater and Cooling</p>
+                    </div>
+                </div>
+                <div className="col-4">
+                    <br />
+                    <img
+                        src={require("../components/images/Sergio.png")}
+                        alt="SEXY Apartment owner"
+                        style={{ borderRadius: "25px" }}
+                    />
+                    <br />
+                    <h2>Owners Contact info:</h2>
+                    <p>Sergio Marquina</p>
+                    <p>Phone Number: +1 (613) 256-7842</p>
+                    <p>Office Location: 559 King Edward Ave, Ottawa, ON</p>
+                    <p>KIN 7N5 Email: metroliving@metroliving.com</p>
+                </div>
+            </div>
+            <br />
+            <br />
             <button
                 onClick={handleClick}
                 type="button"
