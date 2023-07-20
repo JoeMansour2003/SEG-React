@@ -1,144 +1,135 @@
 const About = () => {
     return (
-        <div className="container text-center">
-            <section className="section">
-                <h1>About Us</h1>
-                <br />
-                <div className="row center-cards">
-                    <div className="row-cols-1 row-cols-md-2 g-3">
-                        <div className="col-md-6">
-                            <div className="card h-100">
-                                <img
-                                    className="card-img-top"
-                                    style={{ width: "18rem" }}
-                                    src={require("../components/images/Sergio.png")}
-                                    alt="Photo of Sergio Marquina property owner"
-                                />
-                                <div className="card-body">
-                                    <h4 className="card-title">
-                                        Sergio Marquina
-                                    </h4>
-                                    <div className="card-text">
-                                        <p>
-                                            &#x2022; Specialized in cosmetics
-                                            dentistry
-                                        </p>
-                                        <p>
-                                            &#x2022; Owner of Montreal biggest
-                                            apple cider company.
-                                        </p>
-                                        <p>
-                                            &#x2022; Studied Architecture in
-                                            Italy and received his masters at
-                                            the university of Montreal.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="card h-100">
-                                <img
-                                    className="card-img-top"
-                                    style={{ width: "18rem" }}
-                                    src={require("../components/images/Gus.png")}
-                                    alt="Photo of Gus Fring property owner"
-                                />
-                                <div className="card-body">
-                                    <h4 className="card-title">Gus Fring</h4>
-                                    <div className="card-text">
-                                        <p>
-                                            &#x2022; Owner of Los Pollos
-                                            Hermanos.
-                                        </p>
-                                        <p>
-                                            &#x2022; He specializes in
-                                            organizing apartment services like
-                                            Maintenance, Security, Lease Renewal
-                                            and Rent Collection...
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br />
+        <div
+            className="container"
+            style={{ textAlign: "center", padding: "50px 0" }}
+        >
+            {/* <br />
+            <br />
+            <br />
+            <br /> */}
+
+            <h1>About Us</h1>
+            <br />
+            <br />
+
+            <h4>
+                Welcome to our website! We are a team of professionals dedicated
+                to providing high-quality services to our clients!
+            </h4>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div>
+                <h2>Response Rate for Maintenance</h2>
+                <img
+                    src={require("../components/images/customer_service.jpg")}
+                    className="top"
+                    alt="Maintenance team"
+                />
+                <p>
+                    Based on reviews and client feedback, we have achieved an
+                    amazing score of 1-2 days response rate for fixing major
+                    appliances like stoves, washing machines, and air
+                    conditioning units. For smaller things like fixing a light,
+                    you can expect results within 2 hours. Our response rates
+                    are one of the best as we work hard for our clients,
+                    ensuring they can focus on what's really important for them.
+                </p>
+
+                <img
+                    src={require("../components/images/Number of Maintenance Reports Over The Years.png")}
+                    className="bottom"
+                    alt="Number of Maintenance Reports Over The Years"
+                />
+            </div>
+            <hr />
+            <div>
+                <h2>Maintenance Record and Quality</h2>
+                <img
+                    src={require("../components/images/inpector.jpg")}
+                    className="top"
+                    alt="Inpector"
+                />
+                <img
+                    src={require("../components/images/Home Inpector.jpg")}
+                    className="top"
+                    alt="Home Inpector"
+                />
+                <p>
+                    Our maintenance record speaks for itself. We take pride in
+                    maintaining our properties to the highest standards. Our
+                    team is committed to ensuring that every apartment is in
+                    excellent condition, providing a comfortable and safe living
+                    environment for our residents.
+                    <br />
+                    <br />
+                    Every year, we partner with a trusted third-party company
+                    called CANUIT to conduct a comprehensive and thorough
+                    Apartment Quality Inspection known as "Apartment Quality
+                    Assurance."(AQA for short). This assessment allows us to
+                    assess the condition and overall quality of our apartments
+                    objectively. The maximum score an apartment can achieve is a
+                    perfect 10. Below, you can find the results from their
+                    latest ratings:
+                </p>
+
+                <img
+                    src={require("../components/images/AQA Rating.png")}
+                    className="bottom"
+                    alt="Apartment quality assurance rating"
+                />
+            </div>
+            <hr />
+            <div>
+                <h2>Resolving Complaints and Client Satisfaction</h2>
+                <img
+                    src={require("../components/images/customer support representative assisting.webp")}
+                    className="top"
+                    alt="customer support representative assisting"
+                />
+                <p>
+                    At our company, customer satisfaction is our top priority.
+                    We take all complaints seriously and strive to resolve them
+                    promptly and effectively. Our dedicated customer support
+                    team is always ready to assist our clients, ensuring their
+                    concerns are addressed with care and professionalism.
+                </p>
                 <div className="row">
-                    <div className="col-md-6">
-                        <h2>Opening Hours</h2>
-                        <br />
-                        <table className="table">
-                            <tbody>
-                                <tr>
-                                    <td>Monday</td>
-                                    <td>9:00am - 7:30pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Tuesday</td>
-                                    <td>9:00am - 7:30pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Wednesday</td>
-                                    <td>9:00am - 7:30pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Thursday</td>
-                                    <td>9:00am - 7:30pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Friday</td>
-                                    <td>9:00am - 6:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Saturday</td>
-                                    <td>9:00am - 3:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Sunday</td>
-                                    <td>Closed</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className="col-md-6">
-                        <h2>Phone Number</h2>
-                        <span>
-                            <i className="bi bi-telephone-fill"></i> +1 (613)
-                            256-7842
-                        </span>
-                        <br />
-                        <br />
-                        <img
-                            className="card-img-top"
-                            src={require("../components/images/Customer Service.png")}
-                            alt="Customer Service on the phone"
-                        />
-                    </div>
+                    <img
+                        src={require("../components/images/Responce-Rate.png")}
+                        className="col"
+                        alt="Responce-Rate Graph"
+                    />
+                    <img
+                        src={require("../components/images/Average Repair Time.png")}
+                        className="col"
+                        alt="Average Repair Time Graph"
+                    />
                 </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <h2>Location</h2>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.8107710820786!2d-75.65658422342734!3d45.35263197107235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce08ecd10c04eb%3A0xda1dcfae058b5df2!2s2214%20Bank%20St%2C%20Ottawa%2C%20ON%20K1V%201J5!5e0!3m2!1sen!2sca!4v1689817759668!5m2!1sen!2sca"
-                    width="1000"
-                    height="450"
-                    style={{ border: 0 }}
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-                <div className="address">
-                    <a href="https://goo.gl/maps/JaBeDgXKJ8Ujat818">
-                        <i className="bi bi-geo-alt-fill"></i> 2214 Bank St,
-                        Ottawa, ON K1V 1J5
-                    </a>
-                </div>
-                <br />
-                <div id="map"></div>
-            </section>
+            </div>
+            <hr />
+            <div>
+                <h2>Our Team</h2>
+                <img
+                    src={require("../components/images/team.jpg")}
+                    className="top"
+                    alt="Our Team"
+                />
+                <p>
+                    Behind our success is a team of dedicated professionals who
+                    are passionate about what they do. From property maintenance
+                    to customer support, our team works collaboratively to
+                    deliver exceptional services and create a positive living
+                    experience for our residents.
+                </p>
+            </div>
         </div>
     );
 };

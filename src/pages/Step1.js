@@ -1,4 +1,5 @@
 import { useHistory } from "react-router-dom";
+import { Form, Button } from "react-bootstrap";
 const Step1 = () => {
     const history = useHistory();
     const page1 = () => {
@@ -19,10 +20,10 @@ const Step1 = () => {
                             src={require("../components/images/1-active.png")}
                             alt="..."
                         />
-                        <small>Create Account/Sign in</small>
+                        <small onClick={page1}>Create Account/Sign in</small>
                     </div>
                 </div>
-                <div className="col" onClick={page2}>
+                <div className="col">
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/2-Gray.png")}
@@ -31,7 +32,7 @@ const Step1 = () => {
                         <small>Pre-Approved</small>
                     </div>
                 </div>
-                <div className="col" onClick={page3}>
+                <div className="col">
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/3-Gray.png")}
@@ -45,12 +46,52 @@ const Step1 = () => {
                 <h2>Create Account/Sign in</h2>
             </div>
             {/* /################################################### */}
-            <div className="col-12">
-                <form action="./Step2">
-                    <button className="btn btn-primary" type="submit">
-                        Log in
-                    </button>
-                </form>
+
+            <div className="d-flex justify-content-center">
+                <div className="row align-items-center">
+                    <form
+                        className="row g-3 needs-validation"
+                        novalidate
+                        action="./Step2"
+                    >
+                        <div className="col-md">
+                            <br />
+                            <br />
+                            <label
+                                htmlFor="validation0124"
+                                className="form-label"
+                            >
+                                Email
+                            </label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                id="validation0124"
+                                required
+                            />
+                            <label
+                                htmlFor="validation01247"
+                                className="form-label"
+                            >
+                                Password
+                            </label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="validation01247"
+                                required
+                            />
+                            <br />
+                            <div className="valid-feedback">Looks good!</div>
+                        </div>
+
+                        <div className="col-12">
+                            <button className="btn btn-primary" type="submit">
+                                Log in
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div className="container text-center">
                 <section className="section">
@@ -119,17 +160,14 @@ const Step1 = () => {
                                 htmlFor="validation03"
                                 className="form-label"
                             >
-                                Phone Number
+                                Password
                             </label>
                             <input
-                                type="tel"
+                                type="text"
                                 className="form-control"
                                 id="validation03"
                                 required
                             />
-                            <div className="invalid-feedback">
-                                Please provide a valid phone number.
-                            </div>
                         </div>
                         <div className="col-12">
                             <br />

@@ -14,25 +14,27 @@ const Step1 = () => {
     return (
         <div className="container text-center">
             <div className="row text-muted">
-                <div className="col" onClick={page1}>
+                <div className="col">
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/GreenCheckMark.png")}
                             alt="..."
+                            onClick={page1}
                         />
-                        <small>Create Account/Sign in</small>
+                        <small onClick={page1}>Create Account/Sign in</small>
                     </div>
                 </div>
-                <div className="col" onClick={page2}>
+                <div className="col">
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/2-active.png")}
                             alt="..."
+                            onClick={page2}
                         />
-                        <small>Pre-Approved</small>
+                        <small onClick={page2}>Pre-Approved</small>
                     </div>
                 </div>
-                <div className="col" onClick={page3}>
+                <div className="col">
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/3-Gray.png")}
@@ -57,7 +59,7 @@ const Step1 = () => {
                                 Sin Number
                             </label>
                             <input
-                                type="text"
+                                type="number"
                                 className="form-control"
                                 id="validation01"
                                 required
@@ -106,7 +108,7 @@ const Step1 = () => {
                                 Annual Income
                             </label>
                             <input
-                                type="text"
+                                type="number"
                                 className="form-control"
                                 id="validation03"
                                 required
@@ -114,7 +116,6 @@ const Step1 = () => {
                             <div className="invalid-feedback"></div>
                         </div>
                         <div className="col-md-6">
-                            <br />
                             <br />
                             <label
                                 htmlFor="validation0134"
@@ -132,7 +133,6 @@ const Step1 = () => {
                         </div>
                         <div className="col-md-6">
                             <br />
-                            <br />
                             <label
                                 htmlFor="validation02"
                                 className="form-label"
@@ -149,50 +149,55 @@ const Step1 = () => {
                                 Plaese enter a valid email
                             </div>
                         </div>
-                        <div className="col-md-6">
-                            <br />
-                            <br />
-                            <label
-                                htmlFor="validation04"
-                                className="form-label"
-                            >
-                                Relationship Status
-                            </label>
-                            <select
-                                className="form-select"
-                                id="validation04"
-                                required
-                            >
-                                <option selected disabled value="">
-                                    Choose...
-                                </option>
-                                <option>Single</option>
-                                <option>Married</option>
-                            </select>
-                            <div className="invalid-feedback">
-                                Please select relationship status
+                        <div className="row align-items-center justify-content-center text-center">
+                            <div className="col-md-4">
+                                <br />
+                                <label
+                                    htmlFor="validation04"
+                                    className="form-label"
+                                >
+                                    Relationship Status
+                                </label>
+                                <select
+                                    className="form-select"
+                                    id="validation04"
+                                    required
+                                >
+                                    <option selected disabled value="">
+                                        Choose...
+                                    </option>
+                                    <option>Single</option>
+                                    <option>Married</option>
+                                </select>
+                                <div className="invalid-feedback">
+                                    Please select relationship status
+                                </div>
+                                <br />
                             </div>
                         </div>
-                        <div className="form-check">
-                            <input
-                                className="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="invalidCheck"
-                                required
-                            />
-                            <label
-                                className="form-check-label"
-                                htmlFor="invalidCheck"
-                            >
-                                Authorization to run a credit check
-                            </label>
-                            <div className="invalid-feedback">
-                                You must agree before submitting.
+                        <div className="row justify-content-center">
+                            <div className="col-md-3">
+                                <div className="form-check">
+                                    <input
+                                        className="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="invalidCheck"
+                                        required
+                                    />
+                                    <label
+                                        className="form-check-label"
+                                        htmlFor="invalidCheck"
+                                    >
+                                        Authorization to run a credit check
+                                    </label>
+                                    <div className="invalid-feedback">
+                                        You must agree before submitting.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="col-12">
-                            <br />
                             <button className="btn btn-primary" type="submit">
                                 Submit Application
                             </button>

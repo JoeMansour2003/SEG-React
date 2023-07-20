@@ -4,13 +4,15 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import ContactUs from "./pages/ContactUs";
 import About from "./pages/About";
-import Services from "./pages/Services";
 import Property from "./pages/Property";
 import ForSale from "./pages/ForSale";
 import Step1 from "./pages/Step1";
 import Step2 from "./pages/Step2";
 import Step3 from "./pages/Step3";
+import ConfirmationPage from "./pages/ConfirmationPage";
+import PageNotFound from "./pages/PageNotFound";
 
 const App = () => {
     return (
@@ -20,11 +22,14 @@ const App = () => {
                 <Route exact path="/">
                     <Home />
                 </Route>
+                <Route path="/SEG-React">
+                    <Home />
+                </Route>
+                <Route path="/ContactUs">
+                    <ContactUs />
+                </Route>
                 <Route path="/About">
                     <About />
-                </Route>
-                <Route path="/Services">
-                    <Services />
                 </Route>
                 <Route path="/Property">
                     <Property />
@@ -40,6 +45,12 @@ const App = () => {
                 </Route>
                 <Route path="/Step3">
                     <Step3 />
+                </Route>
+                <Route path="/ConfirmationPage">
+                    <ConfirmationPage />
+                </Route>
+                <Route path="*">
+                    <PageNotFound />
                 </Route>
             </Switch>
         </Router>

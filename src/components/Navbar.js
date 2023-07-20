@@ -39,13 +39,13 @@ const Navbar = () => {
                 >
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/About">
-                                About
+                            <Link className="nav-link" to="/ContactUs">
+                                Contact Us
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/Services">
-                                Services
+                            <Link className="nav-link" to="/About">
+                                About
                             </Link>
                         </li>
                         <li className="nav-item">

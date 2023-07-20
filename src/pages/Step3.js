@@ -11,41 +11,48 @@ const Step1 = () => {
     const page3 = () => {
         history.push("/Step3");
     };
+    const confirmationPage = () => {
+        history.push("./ConfirmationPage");
+    };
+
     return (
         <div className="container text-center">
             <div className="row text-muted">
-                <div className="col" onClick={page1}>
+                <div className="col">
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/GreenCheckMark.png")}
                             alt="..."
+                            onClick={page1}
                         />
-                        <small>Create Account/Sign in</small>
+                        <small onClick={page1}>Create Account/Sign in</small>
                     </div>
                 </div>
-                <div className="col" onClick={page2}>
+                <div className="col">
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/GreenCheckMark.png")}
                             alt="..."
+                            onClick={page2}
                         />
-                        <small> Pre-Approved</small>
+                        <small onClick={page2}> Pre-Approved</small>
                     </div>
                 </div>
-                <div className="col" onClick={page3}>
+                <div className="col">
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/3-active.png")}
                             alt="..."
+                            onClick={page3}
                         />
-                        <small>Book an Appointment</small>
+                        <small onClick={page3}>Book an Appointment</small>
                     </div>
                 </div>
             </div>
             {/* ######################################## */}
             <div className="container text-center">
                 <section>
-                    <form>
+                    <form action="./ConfirmationPage">
                         <div className="col-md-6">
                             <br />
                             <br />

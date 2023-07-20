@@ -12,6 +12,7 @@ const ForSale = () => {
                 id="carouselExampleIndicators"
                 className="carousel slide"
                 data-bs-ride="carousel"
+                style={{ marginBottom: 25 + "px" }}
             >
                 <div className="carousel-indicators">
                     <button
@@ -127,6 +128,7 @@ const ForSale = () => {
             <br />
             <button
                 onClick={handleClick}
+                style={{ marginBottom: 25 + "px" }}
                 type="button"
                 class="btn btn-primary btn-lg"
             >
