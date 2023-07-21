@@ -1,37 +1,43 @@
 import { useHistory } from "react-router-dom";
-const Step1 = () => {
+import { useTranslation } from "react-i18next";
+
+const Step2 = () => {
     const history = useHistory();
+    const [t, i18n] = useTranslation("global");
 
     const page1 = () => {
         history.push("/Step1");
     };
+
     const page2 = () => {
         history.push("/Step2");
     };
+
     const page3 = () => {
         history.push("/Step3");
     };
+
     return (
         <div className="container text-center">
             <div className="row text-muted">
-                <div className="col">
+                <div className="col" onClick={page1}>
                     <div className="img-with-text">
                         <img
-                            src={require("../components/images/GreenCheckMark.png")}
+                            src={require("../components/images/1-active.png")}
                             alt="..."
-                            onClick={page1}
                         />
-                        <small onClick={page1}>Create Account/Sign in</small>
+                        <small onClick={page1}>
+                            {t("step1.create_account_signin")}
+                        </small>
                     </div>
                 </div>
                 <div className="col">
                     <div className="img-with-text">
                         <img
-                            src={require("../components/images/2-active.png")}
+                            src={require("../components/images/2-Gray.png")}
                             alt="..."
-                            onClick={page2}
                         />
-                        <small onClick={page2}>Pre-Approved</small>
+                        <small>{t("step1.pre_approved")}</small>
                     </div>
                 </div>
                 <div className="col">
@@ -40,14 +46,17 @@ const Step1 = () => {
                             src={require("../components/images/3-Gray.png")}
                             alt="..."
                         />
-                        <small>Book an Appointment</small>
+                        <small>{t("step1.book_appointment")}</small>
                     </div>
                 </div>
+            </div>
+            <div className="row ">
+                <h2>{t("step1.create_account_signin")}</h2>
             </div>
             {/* ######################################## */}
             <div className="container text-center">
                 <section className="section">
-                    <h2>Pre-Approved</h2>
+                    <h2>{t("step2.pre_approved")}</h2>
                     <form className="row g-3 needs-validation" action="./Step3">
                         <div className="col-md-6">
                             <br />
@@ -56,7 +65,7 @@ const Step1 = () => {
                                 htmlFor="validation01"
                                 className="form-label"
                             >
-                                Sin Number
+                                {t("step2.sin_number")}
                             </label>
                             <input
                                 type="number"
@@ -64,7 +73,9 @@ const Step1 = () => {
                                 id="validation01"
                                 required
                             />
-                            <div className="valid-feedback">Looks good!</div>
+                            <div className="valid-feedback">
+                                {t("step2.looks_good")}
+                            </div>
                         </div>
                         <div className="col-md-6">
                             <br />
@@ -73,7 +84,7 @@ const Step1 = () => {
                                 htmlFor="validation02"
                                 className="form-label"
                             >
-                                Current Address
+                                {t("step2.current_address")}
                             </label>
                             <input
                                 type="text"
@@ -81,7 +92,9 @@ const Step1 = () => {
                                 id="validation02"
                                 required
                             />
-                            <div className="valid-feedback">Looks good!</div>
+                            <div className="valid-feedback">
+                                {t("step2.looks_good")}
+                            </div>
                         </div>
                         <div className="col-md-6">
                             <br />
@@ -89,7 +102,7 @@ const Step1 = () => {
                                 htmlFor="validation12"
                                 className="form-label"
                             >
-                                Current Emploment
+                                {t("step2.current_employment")}
                             </label>
                             <input
                                 type="text"
@@ -105,7 +118,7 @@ const Step1 = () => {
                                 htmlFor="validation03"
                                 className="form-label"
                             >
-                                Annual Income
+                                {t("step2.annual_income")}
                             </label>
                             <input
                                 type="number"
@@ -121,7 +134,7 @@ const Step1 = () => {
                                 htmlFor="validation0134"
                                 className="form-label"
                             >
-                                Reference Full Name
+                                {t("step2.reference_full_name")}
                             </label>
                             <input
                                 type="text"
@@ -129,7 +142,9 @@ const Step1 = () => {
                                 id="validation0134"
                                 required
                             />
-                            <div className="valid-feedback">Looks good!</div>
+                            <div className="valid-feedback">
+                                {t("step2.looks_good")}
+                            </div>
                         </div>
                         <div className="col-md-6">
                             <br />
@@ -137,7 +152,7 @@ const Step1 = () => {
                                 htmlFor="validation02"
                                 className="form-label"
                             >
-                                Reference Email
+                                {t("step2.reference_email")}
                             </label>
                             <input
                                 type="email"
@@ -146,7 +161,7 @@ const Step1 = () => {
                                 required
                             />
                             <div className="invalid-feedback">
-                                Plaese enter a valid email
+                                {t("step2.enter_valid_email")}
                             </div>
                         </div>
                         <div className="row align-items-center justify-content-center text-center">
@@ -156,7 +171,7 @@ const Step1 = () => {
                                     htmlFor="validation04"
                                     className="form-label"
                                 >
-                                    Relationship Status
+                                    {t("step2.relationship_status")}
                                 </label>
                                 <select
                                     className="form-select"
@@ -164,13 +179,13 @@ const Step1 = () => {
                                     required
                                 >
                                     <option selected disabled value="">
-                                        Choose...
+                                        {t("step2.choose")}
                                     </option>
-                                    <option>Single</option>
-                                    <option>Married</option>
+                                    <option>{t("step2.single")}</option>
+                                    <option>{t("step2.married")}</option>
                                 </select>
                                 <div className="invalid-feedback">
-                                    Please select relationship status
+                                    {t("step2.select_relationship_status")}
                                 </div>
                                 <br />
                             </div>
@@ -189,17 +204,17 @@ const Step1 = () => {
                                         className="form-check-label"
                                         htmlFor="invalidCheck"
                                     >
-                                        Authorization to run a credit check
+                                        {t("step2.authorization_credit_check")}
                                     </label>
                                     <div className="invalid-feedback">
-                                        You must agree before submitting.
+                                        {t("step2.agree_before_submitting")}
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-12">
                             <button className="btn btn-primary" type="submit">
-                                Submit Application
+                                {t("step2.submit_application")}
                             </button>
                         </div>
                     </form>
@@ -209,4 +224,4 @@ const Step1 = () => {
     );
 };
 
-export default Step1;
+export default Step2;

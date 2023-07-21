@@ -1,16 +1,22 @@
 import { useHistory } from "react-router-dom";
-import { Form, Button } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+
 const Step1 = () => {
     const history = useHistory();
+    const [t, i18n] = useTranslation("global");
+
     const page1 = () => {
         history.push("/Step1");
     };
+
     const page2 = () => {
         history.push("/Step2");
     };
+
     const page3 = () => {
         history.push("/Step3");
     };
+
     return (
         <div className="container text-center">
             <div className="row text-muted">
@@ -20,7 +26,9 @@ const Step1 = () => {
                             src={require("../components/images/1-active.png")}
                             alt="..."
                         />
-                        <small onClick={page1}>Create Account/Sign in</small>
+                        <small onClick={page1}>
+                            {t("step1.create_account_signin")}
+                        </small>
                     </div>
                 </div>
                 <div className="col">
@@ -29,7 +37,7 @@ const Step1 = () => {
                             src={require("../components/images/2-Gray.png")}
                             alt="..."
                         />
-                        <small>Pre-Approved</small>
+                        <small>{t("step1.pre_approved")}</small>
                     </div>
                 </div>
                 <div className="col">
@@ -38,12 +46,12 @@ const Step1 = () => {
                             src={require("../components/images/3-Gray.png")}
                             alt="..."
                         />
-                        <small>Book an Appointment</small>
+                        <small>{t("step1.book_appointment")}</small>
                     </div>
                 </div>
             </div>
             <div className="row ">
-                <h2>Create Account/Sign in</h2>
+                <h2>{t("step1.create_account_signin")}</h2>
             </div>
             {/* /################################################### */}
 
@@ -61,7 +69,7 @@ const Step1 = () => {
                                 htmlFor="validation0124"
                                 className="form-label"
                             >
-                                Email
+                                {t("step1.email")}
                             </label>
                             <input
                                 type="email"
@@ -73,7 +81,7 @@ const Step1 = () => {
                                 htmlFor="validation01247"
                                 className="form-label"
                             >
-                                Password
+                                {t("step1.password")}
                             </label>
                             <input
                                 type="text"
@@ -87,7 +95,7 @@ const Step1 = () => {
 
                         <div className="col-12">
                             <button className="btn btn-primary" type="submit">
-                                Log in
+                                {t("step1.login")}
                             </button>
                         </div>
                     </form>
@@ -108,7 +116,7 @@ const Step1 = () => {
                                 htmlFor="validation01"
                                 className="form-label"
                             >
-                                First name
+                                {t("step1.first_name")}
                             </label>
                             <input
                                 type="text"
@@ -125,7 +133,7 @@ const Step1 = () => {
                                 htmlFor="validation02"
                                 className="form-label"
                             >
-                                Last name
+                                {t("step1.last_name")}
                             </label>
                             <input
                                 type="text"
@@ -141,7 +149,7 @@ const Step1 = () => {
                                 htmlFor="validationUsername"
                                 className="form-label"
                             >
-                                Email
+                                {t("step1.email")}
                             </label>
                             <input
                                 type="email"
@@ -151,7 +159,7 @@ const Step1 = () => {
                                 required
                             />
                             <div className="invalid-feedback">
-                                Please provide a valid email.
+                                {t("step1.validation_email")}
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -160,7 +168,7 @@ const Step1 = () => {
                                 htmlFor="validation03"
                                 className="form-label"
                             >
-                                Password
+                                {t("step1.password")}
                             </label>
                             <input
                                 type="text"
@@ -172,7 +180,7 @@ const Step1 = () => {
                         <div className="col-12">
                             <br />
                             <button className="btn btn-primary" type="submit">
-                                Create Account
+                                {t("step1.create_account")}
                             </button>
                         </div>
                     </form>

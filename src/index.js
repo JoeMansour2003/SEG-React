@@ -5,8 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import { I18nextProvider } from "react-i18next";
-import global_en from "./translations/en/global.json";
-import global_fr from "./translations/en/global.json";
+import global_en from "./translations/en/global";
+import global_fr from "./translations/fr/global";
 import i18next from "i18next";
 
 i18next.init({

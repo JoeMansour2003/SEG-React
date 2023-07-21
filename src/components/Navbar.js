@@ -41,17 +41,17 @@ const Navbar = () => {
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link className="nav-link" to="/ContactUs">
-                                Contact Us
+                                {t("nav.contactus")}
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/About">
-                                About
+                                {t("nav.about")}
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/Property">
-                                Property
+                                {t("nav.property")}
                             </Link>
                         </li>
                         <button

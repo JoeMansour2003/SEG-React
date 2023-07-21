@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 const ContactUs = () => {
+    const [t, i18n] = useTranslation("global");
     return (
         <div className="container text-center">
             <section className="section">
-                <h1>About Us</h1>
+                <h1>{t("contactus.main")}</h1>
                 <br />
                 <div className="row center-cards">
                     <div className="row justify-content-around">
@@ -19,18 +22,11 @@ const ContactUs = () => {
                                 />
                                 <div className="card-body">
                                     <h4 className="card-title">
-                                        Sergio Marquina
+                                        {t("contactus.sexy mf")}
                                     </h4>
                                     <div className="card-text">
-                                        <p>
-                                            &#x2022; Owner of Montreal biggest
-                                            apple cider company.
-                                        </p>
-                                        <p>
-                                            &#x2022; Studied Architecture in
-                                            Italy and received his masters at
-                                            the university of Montreal.
-                                        </p>
+                                        <p>{t("contactus.sergio info")}</p>
+                                        <p> {t("contactus.info part2")}</p>
                                     </div>
                                 </div>
                             </div>
@@ -47,18 +43,12 @@ const ContactUs = () => {
                                     alt="Photo of Gus Fring property owner"
                                 />
                                 <div className="card-body">
-                                    <h4 className="card-title">Gus Fring</h4>
+                                    <h4 className="card-title">
+                                        {t("contactus.chicken boy")}
+                                    </h4>
                                     <div className="card-text">
-                                        <p>
-                                            &#x2022; Owner of Los Pollos
-                                            Hermanos.
-                                        </p>
-                                        <p>
-                                            &#x2022; He specializes in
-                                            organizing apartment services like
-                                            Maintenance, Security, Lease Renewal
-                                            and Rent Collection...
-                                        </p>
+                                        <p>{t("contactus.gus info1")}</p>
+                                        <p>{t("contactus.gus info2")}</p>
                                     </div>
                                 </div>
                             </div>
@@ -68,46 +58,58 @@ const ContactUs = () => {
                 <br />
                 <div className="row">
                     <div className="col-md-6">
-                        <h2>Opening Hours</h2>
+                        <h2>{t("contactus.opening hours")}</h2>
                         <br />
                         <table className="table">
                             <tbody>
                                 <tr>
-                                    <td>Monday</td>
+                                    <td>{t("contactus.monday")}</td>
                                     <td>9:00am - 7:30pm</td>
                                 </tr>
                                 <tr>
-                                    <td>Tuesday</td>
+                                    <td>{t("contactus.tuesday")}</td>
                                     <td>9:00am - 7:30pm</td>
                                 </tr>
                                 <tr>
-                                    <td>Wednesday</td>
+                                    <td>{t("contactus.wednesday")}</td>
                                     <td>9:00am - 7:30pm</td>
                                 </tr>
                                 <tr>
-                                    <td>Thursday</td>
+                                    <td>{t("contactus.thursday")}</td>
                                     <td>9:00am - 7:30pm</td>
                                 </tr>
                                 <tr>
-                                    <td>Friday</td>
+                                    <td>{t("contactus.friday")}</td>
                                     <td>9:00am - 6:00pm</td>
                                 </tr>
                                 <tr>
-                                    <td>Saturday</td>
+                                    <td>{t("contactus.saturday")}</td>
                                     <td>9:00am - 3:00pm</td>
                                 </tr>
                                 <tr>
-                                    <td>Sunday</td>
-                                    <td>Closed</td>
+                                    <td>{t("contactus.sunday")}</td>
+                                    <td>{t("contactus.closed")}</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div className="col-md-6">
-                        <h2>Phone Number</h2>
+                        <h2>{t("contactus.phone number")}</h2>
                         <span>
-                            <i className="bi bi-telephone-fill"></i> +1 (613)
-                            256-7842
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-telephone-fill"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                                />
+                            </svg>{" "}
+                            +1 (613) 256-7842
                         </span>
                         <br />
                         <br />
@@ -123,11 +125,20 @@ const ContactUs = () => {
                 <br />
                 <br />
                 <br />
-                <h2>Location</h2>
+                <h2>{t("contactus.location")}</h2>
                 <div className="address">
                     <a href="https://goo.gl/maps/JaBeDgXKJ8Ujat818">
-                        <i className="bi bi-geo-alt-fill"></i> 2214 Bank St,
-                        Ottawa, ON K1V 1J5
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-geo-alt-fill"
+                            viewBox="0 0 16 16"
+                        >
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>
+                        2214 Bank St, Ottawa, ON K1V 1J5
                     </a>
                 </div>
 

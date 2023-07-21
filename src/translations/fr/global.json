@@ -1,5 +1,74 @@
 {
+    "nav": {
+        "contactus": "Contacter nous",
+        "about": "À propos",
+        "property": "Propriété"
+    },
     "home": {
-        "message": "french"
+        "message": "Vivre confortablement n'a jamais été aussi simple!"
+    },
+    "contactus": {
+        "main": "Notre propriétaire",
+        "sexy mf": "Sergio Marquina",
+        "sergio info": "• Propriétaire de la plus grande cidrerie de Montréal.",
+        "info part2": "• A étudié l'architecture en Italie et a obtenu sa maîtrise à l'université de Montréal.",
+        "chicken boy": "Gus Fring",
+        "gus info1": "• Propriétaire de Los Pollos Hermanos.",
+        "gus info2": "• Spécialisé dans l'organisation de services d'appartement tels que l'entretien, la sécurité, le renouvellement de bail et la collecte des loyers...",
+        "opening hours": "Heures d'ouverture",
+        "monday": "Lundi",
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche",
+        "closed": "Fermé",
+        "phone number": "Numéro de téléphone",
+        "location": "Emplacement"
+    },
+    "step1": {
+        "create_account_signin": "Créer un compte / Se connecter",
+        "pre_approved": "Pré-approuvé",
+        "book_appointment": "Prendre un rendez-vous",
+        "email": "Email",
+        "password": "Mot de passe",
+        "login": "Se connecter",
+        "first_name": "Prénom",
+        "last_name": "Nom de famille",
+        "validation_email": "Veuillez fournir une adresse email valide.",
+        "validation_password": "Ce champ est requis.",
+        "create_account": "Créer un compte"
+    },
+    "step2": {
+        "pre_approved": "Pré-approuvé",
+        "sin_number": "Numéro de sécurité sociale",
+        "current_address": "Adresse actuelle",
+        "current_employment": "Emploi actuel",
+        "annual_income": "Revenu annuel",
+        "reference_full_name": "Nom complet de la référence",
+        "reference_email": "Courriel de la référence",
+        "relationship_status": "État civil",
+        "choose": "Choisir...",
+        "single": "Célibataire",
+        "married": "Marié(e)",
+        "authorization_credit_check": "Autorisation de vérifier le crédit",
+        "submit_application": "Soumettre la demande",
+        "looks_good": "C'est bien !",
+        "enter_valid_email": "Veuillez saisir une adresse e-mail valide.",
+        "select_relationship_status": "Veuillez sélectionner l'état civil.",
+        "agree_before_submitting": "Vous devez accepter avant de soumettre."
+    },
+    "step3": {
+        "book_appointment": "Prendre rendez-vous",
+        "num_guest_attending": "Nombre d'invités participant à la visite",
+        "choose_guest_count": "Choisir...",
+        "option_1": "1",
+        "option_2": "2",
+        "option_3": "3",
+        "option_4": "4+",
+        "date": "Date",
+        "select_date": "Sélectionner une date",
+        "book_appointment_btn": "Réserver un rendez-vous"
     }
 }

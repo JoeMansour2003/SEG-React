@@ -4,11 +4,6 @@ const About = () => {
             className="container"
             style={{ textAlign: "center", padding: "50px 0" }}
         >
-            {/* <br />
-            <br />
-            <br />
-            <br /> */}
-
             <h1>About Us</h1>
             <br />
             <br />
