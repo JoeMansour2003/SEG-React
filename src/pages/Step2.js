@@ -24,7 +24,7 @@ const Step2 = () => {
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/1-active.png")}
-                            alt="..."
+                            alt="step 1"
                         />
                         <small onClick={page1}>
                             {t("step1.create_account_signin")}
@@ -35,7 +35,7 @@ const Step2 = () => {
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/2-Gray.png")}
-                            alt="..."
+                            alt="Step 2"
                         />
                         <small>{t("step1.pre_approved")}</small>
                     </div>
@@ -44,7 +44,7 @@ const Step2 = () => {
                     <div className="img-with-text">
                         <img
                             src={require("../components/images/3-Gray.png")}
-                            alt="..."
+                            alt="Step 3"
                         />
                         <small>{t("step1.book_appointment")}</small>
                     </div>
