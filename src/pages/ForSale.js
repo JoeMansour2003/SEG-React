@@ -41,21 +41,21 @@ const ForSale = () => {
                         <img
                             src={require("../components/images/interior2.jpg")}
                             className="d-block w-100"
-                            alt="..."
+                            alt="interior2"
                         />
                     </div>
                     <div className="carousel-item">
                         <img
                             src={require("../components/images/kitchen1.png")}
                             className="d-block w-100"
-                            alt="..."
+                            alt="kitchen1"
                         />
                     </div>
                     <div className="carousel-item">
                         <img
                             src={require("../components/images/washroom1.jpg")}
                             className="d-block w-100"
-                            alt="..."
+                            alt="washroom1"
                         />
                     </div>
                 </div>
@@ -89,7 +89,6 @@ const ForSale = () => {
             <div className="row justify-content-around">
                 <div className="col-4">
                     <div className="text-left">
-                        {/* TODO text is not aligned to the left */}
                         <h4>444 spadian road</h4>
                         <p>Forest Hill, Toronto</p>
                         <br />

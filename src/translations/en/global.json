@@ -5,7 +5,17 @@
         "property": "Property"
     },
     "home": {
-        "message": "Living confortably has never been this easy!"
+        "message": "Living confortably has never been this easy!",
+        "m2": "Your dream can become your reality!",
+        "faq": "Frequently Asked Questions",
+        "faqQ1": "What types of properties do you offer?",
+        "faqA1": "We offer a wide range of properties, including houses, apartments, and condominiums.",
+        "faqQ2": "How can I schedule a property tour?",
+        "faqA2": "You can schedule a property tour by contacting our customer support or using our online booking system.",
+        "faqQ3": "Are pets allowed in the properties?",
+        "faqA3": "Pet policies vary depending on the property. Please check the property listing or contact us for more information.",
+        "faqQ4": "What payment options do you accept?",
+        "faqA4": "We accept various payment options, including credit cards, bank transfers, and online payments."
     },
     "contactus": {
         "main": "Our Owner's",

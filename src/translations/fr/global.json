@@ -5,7 +5,17 @@
         "property": "Propriété"
     },
     "home": {
-        "message": "Vivre confortablement n'a jamais été aussi simple!"
+        "message": "Vivre confortablement n'a jamais été aussi simple!",
+        "m2": "Votre rêve peut devenir votre réalité !",
+        "faq": "Foire Aux Questions",
+        "faqQ1": "Quels types de propriétés proposez-vous ?",
+        "faqA1": "Nous proposons un large éventail de propriétés, notamment des maisons, des appartements et des condominiums.",
+        "faqQ2": "Comment puis-je planifier une visite de propriété ?",
+        "faqA2": "Vous pouvez planifier une visite de propriété en contactant notre service client ou en utilisant notre système de réservation en ligne.",
+        "faqQ3": "Les animaux de compagnie sont-ils autorisés dans les propriétés ?",
+        "faqA3": "Les politiques concernant les animaux de compagnie varient selon la propriété. Veuillez consulter l'annonce de la propriété ou nous contacter pour plus d'informations.",
+        "faqQ4": "Quelles options de paiement acceptez-vous ?",
+        "faqA4": "Nous acceptons différentes options de paiement, y compris les cartes de crédit, les virements bancaires et les paiements en ligne."
     },
     "contactus": {
         "main": "Notre propriétaire",
