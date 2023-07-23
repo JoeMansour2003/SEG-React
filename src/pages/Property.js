@@ -1,12 +1,21 @@
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import house1 from "../components/images/House (1).png";
 
 const Property = () => {
     const history = useHistory();
+    const [hideCards, setHideCards] = useState({
+        toronto: false,
+        ottawa: false,
+        gatineau: false,
+        kingston: false,
+    });
+
     const fetch = () => {
         var get = document.getElementById("get").value;
         document.getElementById("put").value = get;
     };
+
     const fetch2 = () => {
         var put = document.getElementById("put").value;
         document.getElementById("get").value = put;
@@ -15,6 +24,14 @@ const Property = () => {
     const switch_to_Forsale = () => {
         history.push("/ForSale");
     };
+
+    const handleCheckboxChange = (checkboxId) => {
+        setHideCards((prevState) => ({
+            ...prevState,
+            [checkboxId]: !prevState[checkboxId],
+        }));
+    };
+
     return (
         <div className="container">
             <br />
@@ -65,6 +82,9 @@ const Property = () => {
                                         type="checkbox"
                                         id="checkbox1"
                                         name="checkbox1"
+                                        onChange={() =>
+                                            handleCheckboxChange("ottawa")
+                                        }
                                     />
                                     <label
                                         htmlFor="checkbox1"
@@ -77,6 +97,9 @@ const Property = () => {
                                         type="checkbox"
                                         id="checkbox2"
                                         name="checkbox2"
+                                        onChange={() =>
+                                            handleCheckboxChange("toronto")
+                                        }
                                     />
                                     <label
                                         htmlFor="checkbox2"
@@ -89,6 +112,9 @@ const Property = () => {
                                         type="checkbox"
                                         id="checkbox12438"
                                         name="checkbox12438"
+                                        onChange={() =>
+                                            handleCheckboxChange("gatineau")
+                                        }
                                     />
                                     <label
                                         htmlFor="checkbox12438"
@@ -101,6 +127,9 @@ const Property = () => {
                                         type="checkbox"
                                         id="checkbox124389"
                                         name="checkbox124389"
+                                        onChange={() =>
+                                            handleCheckboxChange("kingston")
+                                        }
                                     />
                                     <label
                                         htmlFor="checkbox124389"
@@ -123,372 +152,114 @@ const Property = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="card">
-                            <div className="card-header" id="headingTwo">
-                                <h5 className="mb-0">
-                                    <button
-                                        className="btn btn-link collapsed"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo"
-                                        aria-expanded="false"
-                                        aria-controls="collapseTwo"
-                                    >
-                                        Property Type
-                                    </button>
-                                </h5>
-                            </div>
-                            <div
-                                id="collapseTwo"
-                                className="collapse"
-                                aria-labelledby="headingTwo"
-                                data-parent="#accordion"
-                            >
-                                <div className="card-body">
-                                    <input
-                                        type="checkbox"
-                                        id="checkbox4"
-                                        name="checkbox4"
-                                    />
-                                    <label
-                                        htmlFor="checkbox4"
-                                        style={{ marginLeft: 3 + "px" }}
-                                    >
-                                        Apartment
-                                    </label>
-                                    <br />
-                                    <input
-                                        type="checkbox"
-                                        id="checkbox5"
-                                        name="checkbox5"
-                                    />
-                                    <label
-                                        htmlFor="checkbox5"
-                                        style={{ marginLeft: 3 + "px" }}
-                                    >
-                                        Condominium
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col">
-                                <div className="card">
-                                    <div
-                                        className="card-header"
-                                        id="headingThree"
-                                    >
-                                        <h5 className="mb-0">
-                                            <button
-                                                className="btn btn-link collapsed"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#collapseThree"
-                                                aria-expanded="false"
-                                                aria-controls="collapseThree"
-                                            >
-                                                Lease and Fees
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div
-                                        id="collapseThree"
-                                        className="collapse"
-                                        aria-labelledby="headingThree"
-                                        data-parent="#accordion"
-                                    >
-                                        <div className="card-body">
-                                            <input
-                                                type="checkbox"
-                                                id="checkbox7"
-                                                name="checkbox7"
-                                            />
-                                            <label
-                                                htmlFor="checkbox7"
-                                                style={{ marginLeft: 3 + "px" }}
-                                            >
-                                                Monthly Payments
-                                            </label>
-                                            <br />
-                                            <input
-                                                type="checkbox"
-                                                id="checkbox8"
-                                                name="checkbox8"
-                                            />
-                                            <label
-                                                htmlFor="checkbox8"
-                                                style={{ marginLeft: 3 + "px" }}
-                                            >
-                                                Semi-Annual Payments
-                                            </label>
-                                            <br />
-                                            <input
-                                                type="checkbox"
-                                                id="checkbox9"
-                                                name="checkbox9"
-                                            />
-                                            <label
-                                                htmlFor="checkbox9"
-                                                style={{ marginLeft: 3 + "px" }}
-                                            >
-                                                Annual Payments
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col">
-                                <div className="card">
-                                    <div
-                                        className="card-header"
-                                        id="headingfour"
-                                    >
-                                        <h5 className="mb-0">
-                                            <button
-                                                className="btn btn-link collapsed"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#collapsefour"
-                                                aria-expanded="false"
-                                                aria-controls="collapsefour"
-                                            >
-                                                Included Amenities
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div
-                                        id="collapsefour"
-                                        className="collapse"
-                                        aria-labelledby="headingfour"
-                                        data-parent="#accordion"
-                                    >
-                                        <div className="card-body">
-                                            <input
-                                                type="checkbox"
-                                                id="checkbox7"
-                                                name="checkbox7"
-                                            />
-                                            <label
-                                                htmlFor="checkbox7"
-                                                style={{ marginLeft: 3 + "px" }}
-                                            >
-                                                Laundry Machines
-                                            </label>
-                                            <br />
-                                            <input
-                                                type="checkbox"
-                                                id="checkbox8"
-                                                name="checkbox8"
-                                            />
-                                            <label
-                                                htmlFor="checkbox8"
-                                                style={{ marginLeft: 3 + "px" }}
-                                            >
-                                                Kitchen Appliances
-                                            </label>
-                                            <br />
-                                            <input
-                                                type="checkbox"
-                                                id="checkbox9"
-                                                name="checkbox9"
-                                            />
-                                            <label
-                                                htmlFor="checkbox9"
-                                                style={{ marginLeft: 3 + "px" }}
-                                            >
-                                                Heating & Cooling
-                                            </label>
-                                            <br />
-                                            <input
-                                                type="checkbox"
-                                                id="checkbox9ew"
-                                                name="checkbox9ew"
-                                            />
-                                            <label
-                                                htmlFor="checkbox9ew"
-                                                style={{ marginLeft: 3 + "px" }}
-                                            >
-                                                Internet Access
-                                            </label>
-                                            <br />
-                                            <input
-                                                type="checkbox"
-                                                id="checkbox9ewd"
-                                                name="checkbox9ewd"
-                                            />
-                                            <label
-                                                htmlFor="checkbox9ewd"
-                                                style={{ marginLeft: 3 + "px" }}
-                                            >
-                                                Internet Access
-                                            </label>
-                                            <br />
-                                            <input
-                                                type="checkbox"
-                                                id="checkbox9ewa"
-                                                name="checkbox9ewa"
-                                            />
-                                            <label
-                                                htmlFor="checkbox9ewa"
-                                                style={{ marginLeft: 3 + "px" }}
-                                            >
-                                                Gym
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col">
-                            <div className="card">
-                                <div className="card-header" id="headingfive">
-                                    <h5 className="mb-0">
-                                        <button
-                                            className="btn btn-link collapsed"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#collapsefive"
-                                            aria-expanded="false"
-                                            aria-controls="collapsefive"
-                                        >
-                                            Policies
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div
-                                    id="collapsefive"
-                                    className="collapse"
-                                    aria-labelledby="headingfive"
-                                    data-parent="#accordion"
-                                >
-                                    <div className="card-body">
-                                        <input
-                                            type="checkbox"
-                                            id="checkbox7"
-                                            name="checkbox7"
-                                        />
-                                        <label
-                                            htmlFor="checkbox7"
-                                            style={{ marginLeft: 3 + "px" }}
-                                        >
-                                            Pet Friendly
-                                        </label>
-                                        <br />
-                                        <input
-                                            type="checkbox"
-                                            id="checkbox8"
-                                            name="checkbox8"
-                                        />
-                                        <label
-                                            htmlFor="checkbox8"
-                                            style={{ marginLeft: 3 + "px" }}
-                                        >
-                                            Parking
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {/* Add other cards if you have more sections */}
                     </div>
                 </div>
 
-                {/* cards                 */}
-
+                {/* cards */}
                 <div className="col">
                     <div className="row row-cols-1 row-cols-md-2 g-3">
-                        <div className="col">
-                            <div
-                                onClick={switch_to_Forsale}
-                                className="card h-100"
-                            >
-                                <img
-                                    src={require("../components/images/House (1).png")}
-                                    className="card-img-top"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">
-                                        5883 Rue Hutchison, Montreal
-                                    </h5>
-                                    <p className="card-text">$2300</p>
-                                    <p className="card-text">
-                                        <small class="text-body-secondary">
-                                            4 Bedroom, 2 Washroom
-                                        </small>
-                                    </p>
+                        {/* Conditionally render the cards based on the checkbox states */}
+                        {!hideCards.ottawa && (
+                            <div className="col">
+                                <div
+                                    onClick={switch_to_Forsale}
+                                    className="card h-100"
+                                >
+                                    <img
+                                        src={require("../components/images/House (1).png")}
+                                        className="card-img-top"
+                                        alt="..."
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title">
+                                            5883 Rue Hutchison, Montreal
+                                        </h5>
+                                        <p className="card-text">$2300</p>
+                                        <p className="card-text">
+                                            <small className="text-body-secondary">
+                                                4 Bedroom, 2 Washroom
+                                            </small>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col">
-                            <div
-                                onClick={switch_to_Forsale}
-                                className="card h-100"
-                            >
-                                <img
-                                    src={require("../components/images/House (2).png")}
-                                    className="card-img-top"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">
-                                        120 Playfair Ave, Toronto
-                                    </h5>
-                                    <p className="card-text">$3841</p>
-                                    <p className="card-text">
-                                        <small class="text-body-secondary">
-                                            2 Bedroom, 1 Washroom
-                                        </small>
-                                    </p>
+                        )}
+                        {!hideCards.toronto && (
+                            <div className="col">
+                                <div
+                                    onClick={switch_to_Forsale}
+                                    className="card h-100"
+                                >
+                                    <img
+                                        src={require("../components/images/House (2).png")}
+                                        className="card-img-top"
+                                        alt="..."
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title">
+                                            120 Playfair Ave, Toronto
+                                        </h5>
+                                        <p className="card-text">$3841</p>
+                                        <p className="card-text">
+                                            <small className="text-body-secondary">
+                                                2 Bedroom, 1 Washroom
+                                            </small>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col">
-                            <div
-                                className="card h-100"
-                                onClick={switch_to_Forsale}
-                            >
-                                <img
-                                    src={require("../components/images/House (3).png")}
-                                    className="card-img-top"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">
-                                        341 Spartan Ave, Ottawa
-                                    </h5>
-                                    <p className="card-text">$7037</p>
-                                    <p className="card-text">
-                                        <small class="text-body-secondary">
-                                            3 Bedroom, 1 Washroom
-                                        </small>
-                                    </p>
+                        )}
+                        {!hideCards.gatineau && (
+                            <div className="col">
+                                <div
+                                    onClick={switch_to_Forsale}
+                                    className="card h-100"
+                                >
+                                    <img
+                                        src={require("../components/images/House (3).png")}
+                                        className="card-img-top"
+                                        alt="..."
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title">
+                                            341 Spartan Ave, Ottawa
+                                        </h5>
+                                        <p className="card-text">$7037</p>
+                                        <p className="card-text">
+                                            <small className="text-body-secondary">
+                                                3 Bedroom, 1 Washroom
+                                            </small>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col">
-                            <div
-                                className="card h-100"
-                                onClick={switch_to_Forsale}
-                            >
-                                <img
-                                    src={require("../components/images/House (4).png")}
-                                    className="card-img-top"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">
-                                        332 Emerald St, Kingston
-                                    </h5>
-                                    <p className="card-text">$1200</p>
-                                    <p className="card-text">
-                                        <small class="text-body-secondary">
-                                            1 Bedroom, 1 Washroom
-                                        </small>
-                                    </p>
+                        )}
+                        {!hideCards.kingston && (
+                            <div className="col">
+                                <div
+                                    onClick={switch_to_Forsale}
+                                    className="card h-100"
+                                >
+                                    <img
+                                        src={require("../components/images/House (4).png")}
+                                        className="card-img-top"
+                                        alt="..."
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title">
+                                            332 Emerald St, Kingston
+                                        </h5>
+                                        <p className="card-text">$1200</p>
+                                        <p className="card-text">
+                                            <small className="text-body-secondary">
+                                                1 Bedroom, 1 Washroom
+                                            </small>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>
